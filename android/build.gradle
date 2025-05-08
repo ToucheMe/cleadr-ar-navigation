@@ -1,0 +1,50 @@
+allprojects {
+    repositories {
+        flatDir {
+            dirs "${project(':unityLibrary').projectDir}/libs"
+            // dirs(file("${project(":unityLibrary").projectDir}/libs")) // Flutter 3.29+
+        }
+
+        google()
+        mavenCentral()
+    }
+
+    tasks.withType(JavaCompile).configureEach {
+        javaCompiler = javaToolchains.compilerFor {
+
+        // Java Version [Java 17]
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+  }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+
+// Fixed errors in release builds: https://stackoverflow.com/questions/69033022/message-error-resource-androidattr-lstar-not-found
+subprojects {
+    afterEvaluate { project ->
+        if (project.plugins.hasPlugin("com.android.application") ||
+                project.plugins.hasPlugin("com.android.library")) {
+            project.android {
+
+                // Android Version (API Level) [Android 14 (API Level 34)]
+                // Also refer to /android/app/build.gradle.
+                // Note: Make sure this aligns with Unity's Minimum API Level
+                // (Unity -> Edit -> Project Settings -> Player -> Other Settings -> Minimum API Level)
+                compileSdkVersion 34
+                buildToolsVersion "34.0.0"
+            }
+        }
+    }
+}
+
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,73 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.fyp.cleadr"
+    compileSdk = flutter.compileSdkVersion
+    // ndkVersion = flutter.ndkVersion
+
+    // NDK Version [27.0.12077973]
+    // 1. Refer to flutter_unity_widget dependencies to determine the version.
+    // 2. Change the "ndkVersion" and "ndkPath" variable in Unity's Build.cs according to the NDK path using from Android Studio.
+    ndkVersion = "27.0.12077973"
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId = "com.fyp.cleadr"
+        // You can update the following values to match your application needs.
+        // For more information, see: https://flutter.dev/to/review-gradle-config.
+        // minSdk = flutter.minSdkVersion
+
+        // Android Version (API Level) [Android 14 (API Level 34)]
+        // Also refer to /android/build.gradle.
+        // Note: Make sure this aligns with Unity's Minimum API Level
+        // (Unity -> Edit -> Project Settings -> Player -> Other Settings -> Minimum API Level).
+        minSdk = 34
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            // TODO: Add your own signing config for the release build.
+            // Signing with the debug keys for now, so `flutter run --release` works.
+            signingConfig = signingConfigs.debug
+        }
+
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        profile {
+            signingConfig signingConfigs.debug
+        }
+        innerTest {
+            matchingFallbacks = ['debug', 'release']
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    implementation project(':unityLibrary')
+    // implementation(project(":unityLibrary")) // Flutter 3.29+
+
+    implementation project(':flutter_unity_widget')
+    // implementation(project(":flutter_unity_widget")) // Flutter 3.29+
+}

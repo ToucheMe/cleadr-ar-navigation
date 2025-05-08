@@ -1,0 +1,41 @@
+name: cleadr
+description: "An AI-Enhanced AR navigation app for seamless driving."
+
+# Prevent accidental publishing to pub.dev.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.6.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  
+  # cleadr added dependencies
+  google_navigation_flutter: ^0.4.0
+  flutter_unity_widget:
+    path: flutter_unity_widget
+  http: ^1.3.0
+  geolocator: ^13.0.2
+  location: ^7.0.1
+  permission_handler: ^11.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Enable generation of localized Strings from arb files.
+  generate: true
+
+  assets:
+    # Add assets from the images directory to the application.
+    - assets/images/
