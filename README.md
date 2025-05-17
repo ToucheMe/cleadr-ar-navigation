@@ -12,8 +12,8 @@ This project implements AR Foundation, ARCore, and Deep Learning to integrate Au
 | **iOS**      |   ❌   |        -        |
 
 ## Demo
-![assets/images/Demo_1.gif](assets/images/Demo_1.gif)
-![assets/images/Demo_2.gif](assets/images/Demo_2.gif)
+![assets/docs/demo_1.gif](assets/docs/demo_1.gif)
+![assets/docs/demo_2.gif](assets/docs/demo_2.gif)
 
 ## Installation & Setup
 <i> Important: Please refer to the [Dependencies](#dependencies) section. </i>
