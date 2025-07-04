@@ -4,6 +4,8 @@
 
 <b> Project Title: </b> Cleadr: AI-Enhanced AR Navigation App for Seamless Driving <br>
 
+🏆 Second Prize - [UTAR FICT FYP Competition (February Trimester) 2025](assets/docs/fyp_competition.jpg)
+
 This project implements AR Foundation, ARCore, and Deep Learning to integrate Augmented Reality (AR) and Artificial Intelligence (AI) into a mobile navigation application to provide clearer directions. The core features are AR Navigation and Lane Identification.
 
 | Platform     | Support | Minimum Version |
