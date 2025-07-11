@@ -21,7 +21,7 @@ This project implements AR Foundation, ARCore, and Deep Learning to integrate Au
 <i> Important: Please refer to the [Dependencies](#dependencies) section. </i>
 
 ### Source Code
-The main source code for this project are structured into 3 directories which are:
+The main source code for this project is structured into 3 directories which are:
 - `/lib`
     - Contains the main Flutter application.
 - `/tflite`
