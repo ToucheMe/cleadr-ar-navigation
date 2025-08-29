@@ -3,6 +3,8 @@
 <b> Universiti Tunku Abdul Rahman (UTAR) - Bachelor of Computer Science (Honours) - Brandon Ting En Junn (21ACB01751) - Final Year Project (FYP) </b>
 
 <b> Project Title: </b> Cleadr: AI-Enhanced AR Navigation App for Seamless Driving <br>
+<b> PDF: </b> [http://eprints.utar.edu.my/7297/1/fyp_CS_2025_TBEJ.pdf](http://eprints.utar.edu.my/7297/1/fyp_CS_2025_TBEJ.pdf) <br>
+<b> URI: </b> [http://eprints.utar.edu.my/id/eprint/7297](http://eprints.utar.edu.my/id/eprint/7297) <br>
 
 🏆 Second Prize - [UTAR FICT FYP Competition (February Trimester) 2025](assets/docs/fyp_competition.jpg)
 
